@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .custom-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f80365;
+        }
+
+        .custom-container h1 {
+            color: white;
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .custom-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+            color: white;
+            font-size: 18px;
+            font-family: sans-serif;
+            background-color: #550037;
+            padding: 20px;
+        }
+
+        .custom-form-input,
+        .custom-form-select,
+        .custom-form-textarea {
+            border: none;
+            padding: 5px;
+            margin-top: 10px;
+            font-family: sans-serif;
+            width: 100%;
+        }
+
+        .custom-form-input:focus,
+        .custom-form-textarea:focus {
+            box-shadow: 3px 3px 10px rgb(228, 228, 228), -3px -3px 10px rgb(224, 224, 224);
+        }
+
+        .custom-form-submit {
+            width: 100%;
+            padding: 8px 0;
+            font-size: 20px;
+            color: #2c2c2c;
+            background-color: #ffffff;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .custom-form-submit:hover {
+            box-shadow: 3px 3px 6px rgb(255, 214, 176);
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-container">
+        <h1>Registration Form</h1>
+        <form name="registration" class="custom-form" onsubmit="return formValidation()">
+            <table>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" name="name" id="name" class="custom-form-input" placeholder="Your name"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="text" name="email" id="email" class="custom-form-input" placeholder="Your email"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" name="password" id="password" class="custom-form-input"></td>
+                </tr>
+                <tr>
+                    <td><label for="phoneNumber">Phone Number:</label></td>
+                    <td><input type="number" name="phoneNumber" id="phoneNumber" class="custom-form-input"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td>
+                        Male: <input type="radio" name="gender" value="male">
+                        Female: <input type="radio" name="gender" value="female">
+                        Other: <input type="radio" name="gender" value="other">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="language">Language</label></td>
+                    <td>
+                        <select name="language" id="language" class="custom-form-select">
+                            <option value="">Select language</option>
+                            <option value="English">English</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="Russian">Russian</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="zipcode">Zip Code:</label></td>
+                    <td><input type="number" name="zipcode" id="zipcode" class="custom-form-input"></td>
+                </tr>
+                <tr>
+                    <td><label for="about">About:</label></td>
+                    <td><textarea name="about" id="about" class="custom-form-textarea" placeholder="Write about yourself..."></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" class="custom-form-submit" value="Register" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
